@@ -1,2 +1,31 @@
+// Color Scheme
+$colorBackground: grey
+$colorForeground: black
+$colorText: white
+$colorTextUnvisited: blue
+$colorTextVisited: grey
+$colorTextHover: purple
+$colorTextActive: red
+$colorAccentPrimary: black
+$colorAccentSecondary: black
+$colorAccentTertiary: black
+
+// Font details
+$fontHeader: 'EIisabethischeBook'
+$fontContent: 'LektonCode'
+$fontSize: 12px
+$fontHeadingScale: 8 // amount of px to grow from h6 to h1
+
+
 body
-    font-family: sans-serif
+    background-color: $colorBackground
+    color: $colorText
+    font-family: $fontContent
+    font-weight: normal
+    font-style: normal
+
+// https://stackoverflow.com/a/38467145 by Fabian Mebus 
+@for $i from 1 through 6
+    h#{$i}
+        font-size: $fontSize + $fontHeadingScale * (6 - $i)
+        font-family: $fontHeader    
