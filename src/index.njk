@@ -1,0 +1,15 @@
+---
+pageTitle: Index
+templateClass: 'index'
+---
+{% extends "base.njk" %}
+
+<script>
+  var locale = {lang: navigator.language || navigator.userLanguage}
+  nunjucks.renderString("{{ lang }}", locale)
+</script>
+
+{% block content %}
+    <h1>Enter website</h1>
+    <p>Choose language above</p>
+{% endblock %}

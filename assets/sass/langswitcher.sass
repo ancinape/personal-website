@@ -1,0 +1,90 @@
+@use 'var'
+
+.header 
+    position: sticky
+
+
+.back 
+    margin-bottom: 2em
+    display: block
+    font-size: 14px
+
+
+.c-lggnav 
+    border: 2px solid var.$colorForeground
+    display: flex
+    justify-content: space-evenly
+
+
+.c-lggnav .c-lggnav__item 
+    width: 100%
+    text-align: center
+    text-transform: uppercase
+
+
+.index .c-lggnav .c-lggnav__item .c-lggnav__link 
+    color: var.$colorText
+
+
+.index .c-lggnav .c-lggnav__item:first-child 
+    border-right: 2px solid var.$colorForeground
+
+
+.c-lggnav .c-lggnav__item .c-lggnav__link 
+    padding: 1em 0
+    display: block
+    color: var.$colorText
+    margin: 5px
+    padding: 10px
+
+
+.c-lggnav .c-lggnav__item.is-active 
+    background-color: var.$colorForeground
+
+.c-lggnav .c-lggnav__item.is-active .c-lggnav__link 
+    color: var.$colorTextActive
+
+
+.c-lggnav .c-lggnav__link 
+    font-family: var.$fontHeader
+    font-size: 20px
+    font-weight: 800
+    color: var.$colorText
+
+.post 
+    width: 100%
+
+
+.post-list 
+    margin-top: 3em
+
+
+.post-list li 
+    padding: 0.5em 0
+    border: 2px solid var.$color1
+    transition: 0.4s
+
+
+.post-list li:hover 
+    background: var.$colorTextHover
+
+
+.u-flex 
+    display: flex
+
+
+.u-justify-between 
+    justify-content: space-between
+
+
+/*A11TY*/
+.u-visually-hidden 
+    display: block
+    height: 1px
+    width: 1px
+    overflow: hidden
+    clip: rect(1px 1px 1px 1px)
+    clip: rect(1px, 1px, 1px, 1px)
+    clip-path: inset(1px)
+    white-space: nowrap
+    position: absolute

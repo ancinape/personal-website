@@ -1,0 +1,5 @@
+{% for navitem in nav[locale] %}
+  {% if loop.first %}<ul class="nav" role="menubar">{% endif %}
+    <a href="{{ navitem.url }}"><li role="menuitem">{{ navitem.label }}</li></a>
+  {% if loop.last %}</ul>{% endif %}
+{% endfor %}

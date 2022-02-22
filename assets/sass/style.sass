@@ -1,31 +1,64 @@
-// Color Scheme
-$colorBackground: grey
-$colorForeground: black
-$colorText: white
-$colorTextUnvisited: blue
-$colorTextVisited: grey
-$colorTextHover: purple
-$colorTextActive: red
-$colorAccentPrimary: black
-$colorAccentSecondary: black
-$colorAccentTertiary: black
+@use 'var'
 
-// Font details
-$fontHeader: 'EIisabethischeBook'
-$fontContent: 'LektonCode'
-$fontSize: 12px
-$fontHeadingScale: 8 // amount of px to grow from h6 to h1
-
-
-body
-    background-color: $colorBackground
-    color: $colorText
-    font-family: $fontContent
+:root
+    background-color: var.$colorBackground
+    color: var.$colorText
+    font-family: var.$fontBody
     font-weight: normal
     font-style: normal
+    font-size: 16pt
+    color-scheme: day
+
+    p
+        line-height: 1.4rem
+
+    #view
+        display: grid
+        grid-template-columns: 1fr 4fr 1fr
+        gap: 20px
+    
+    nav
+        margin-top: 5rem
+        display: flex
+        flex-direction: rows
+        justify-content: space-around
+        
+        li
+            width: 80%
+            text-align: center
+            background-color: var.$colorBackground
+            border: 2px solid var.$colorForeground
+            font-size: 20pt
+            margin: 20px
+            padding: 30px
+
+    main
+        max-width: 54rem
+        padding-top: 10rem
+        padding-left: 1.25rem
+        padding-right: 1.25rem
+
+    a:link
+        color: var.$colorTextUnvisited
+    
+    a:visited
+        color: var.$colorTextVisited
+
+    a:focus
+        color: var.$colorTextHover
+    
+    a:hover
+        color: var.$colorTextHover
+
+    a:active
+        color: var.$colorTextActive
 
 // https://stackoverflow.com/a/38467145 by Fabian Mebus 
 @for $i from 1 through 6
     h#{$i}
-        font-size: $fontSize + $fontHeadingScale * (6 - $i)
-        font-family: $fontHeader    
+        font-size: var.$fontSize + var.$fontHeadingScale * (6 - $i)
+        font-family: var.$fontHeader
+        line-height: 4rem
+    
+    h1
+        color: var.$color1

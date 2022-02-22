@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{{ site[locale].metaTitle }}</title>
+        <meta name="description" content="{{ site[locale].metaDescription }}"/>
+        <script>document.documentElement.classList.remove('no-js');</script>
+        <link rel ="icon" href="/assets/favicon.ico" sizes="any">
+        <link rel="stylesheet" href="{{ '/assets/css/cssclear.css' | url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/langswitcher.css' | url }}">
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/eiisabethische" type="text/css"/>
+    </head>
+    
+    <body>
+        
+        <div id="view">
+            <nav>
+                {% include "partials/nav.njk" %}
+            </nav>
+            <main>
+                <h1>{{ pageTitle }}</h1>
+                {% block content %}{% endblock %}
+            </main>
+            <aside>
+                {% include "partials/header.njk" %}
+            </aside>
+        </div>
+        
+        <script>{% include "src/js/app.js" %}</script>
+        {# include "partials/footer.njk" #}
+    </body>
+
+</html>
