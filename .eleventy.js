@@ -1,7 +1,6 @@
-var moment = require('moment');
+const moment = require("moment");
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addWatchTarget("./assets/sass");
-    eleventyConfig.addPassthroughCopy("./assets/css");
+    eleventyConfig.addWatchTarget("assets/sass");
     eleventyConfig.addPassthroughCopy('src/js/');
 
     eleventyConfig.addNunjucksFilter("date", function (date, format, locale) {
@@ -12,11 +11,11 @@ module.exports = function (eleventyConfig) {
                        
     // Locale collections
     eleventyConfig.addCollection("posts_en", function (collection) {
-        return collection.getFilteredByGlob("./src/en/posts/*.md");
+        return collection.getFilteredByGlob("src/en/posts/*.md");
     });
 
     eleventyConfig.addCollection("posts_ru", function (collection) {
-        return collection.getFilteredByGlob("./src/ru/posts/*.md");
+        return collection.getFilteredByGlob("src/ru/posts/*.md");
     });
     
     return {

@@ -1,5 +1,0 @@
-Multilingual design:
-https://www.webstoemp.com/blog/multilingual-sites-eleventy/
-
-Language switcher:
-https://www.webstoemp.com/blog/language-switcher-multilingual-jamstack-sites/

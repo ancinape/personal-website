@@ -8,7 +8,9 @@
     font-style: normal
     font-size: 16pt
     color-scheme: day
-
+    text-rendering: optimizeLegibility
+    -moz-osx-font-smoothing: grayscale
+    -webkit-font-smoothing: antialiased 
     p
         line-height: 1.4rem
 
@@ -33,25 +35,32 @@
             padding: 30px
 
     main
-        max-width: 54rem
-        padding-top: 10rem
+        padding-top: 6rem
         padding-left: 1.25rem
         padding-right: 1.25rem
 
-    a:link
-        color: var.$colorTextUnvisited
-    
-    a:visited
-        color: var.$colorTextVisited
+    a
+        &:link
+            color: var.$colorTextUnvisited
+        
+        &:visited
+            color: var.$colorTextVisited
 
-    a:focus
-        color: var.$colorTextHover
-    
-    a:hover
-        color: var.$colorTextHover
+        &:focus
+            color: var.$colorTextHover
+        
+        &:hover
+            color: var.$colorTextHover
 
-    a:active
-        color: var.$colorTextActive
+        &:active
+            color: var.$colorTextActive
+    
+    canvas
+        display: block
+        margin-left: auto
+        margin-right: auto
+        background-color: var.$colorForeground
+        max-height: 400px
 
 // https://stackoverflow.com/a/38467145 by Fabian Mebus 
 @for $i from 1 through 6
