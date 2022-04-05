@@ -1,16 +1,24 @@
+@use 'sass:color'
 @use 'var'
 
+
 :root
+    background-image: url(../img/noise.jpg)
     background-color: var.$colorBackground
+    background-blend-mode: multiply
     color: var.$colorText
     font-family: var.$fontBody
     font-weight: normal
     font-style: normal
     font-size: 16pt
     color-scheme: day
-    text-rendering: optimizeLegibility
-    -moz-osx-font-smoothing: grayscale
-    -webkit-font-smoothing: antialiased 
+
+    strong, b
+        font-weight: bold
+
+    em, i
+        font-style: italic
+
     p
         line-height: 1.4rem
 
@@ -24,7 +32,10 @@
         display: flex
         flex-direction: rows
         justify-content: space-around
-        
+
+        ul
+            position: fixed
+
         li
             width: 80%
             text-align: center
@@ -61,6 +72,15 @@
         margin-right: auto
         background-color: var.$colorForeground
         max-height: 400px
+    
+    main ul
+        list-style: disc
+
+        li li
+            list-style: circle
+        
+            li
+                list-style: square
 
 // https://stackoverflow.com/a/38467145 by Fabian Mebus 
 @for $i from 1 through 6
@@ -71,3 +91,10 @@
     
     h1
         color: var.$color1
+    
+    h3 span
+        position: absolute
+        right: 20%
+        font-style: italic
+        font-size: var.$fontSize + var.$fontHeadingScale * 2
+        color: lighten(var.$colorForeground, 15%)

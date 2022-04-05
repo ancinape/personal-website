@@ -5,7 +5,6 @@ var x = canvas.width/2;
 var y = canvas.height-30;
 var dx = canvas.height/20;
 var dy = -(canvas.height/20);
-
 function drawBall() {
     ctx.beginPath();
     ctx.arc(x, y, ballRadius, 0, Math.PI*2);
@@ -13,7 +12,6 @@ function drawBall() {
     ctx.fill();
     ctx.closePath();
 }
-
 function draw() {
     ctx.canvas.width = window.innerWidth;
     ctx.canvas.height = window.innerHeight;
@@ -30,6 +28,4 @@ function draw() {
     x += dx;
     y += dy;
 }
-
-
 setInterval(draw, 10);

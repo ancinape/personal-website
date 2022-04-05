@@ -1,7 +1,7 @@
 const moment = require("moment");
 module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget("assets/sass");
-    eleventyConfig.addPassthroughCopy('src/js/');
+    eleventyConfig.addPassthroughCopy('assets/img');
 
     eleventyConfig.addNunjucksFilter("date", function (date, format, locale) {
         locale = locale ? locale : "en";

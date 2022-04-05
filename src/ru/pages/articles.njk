@@ -1,13 +1,11 @@
 ---
+layout: base.njk
 pageTitle: Статьи
 permalink: "/{{ locale }}/статьи/index.html"
 translationKey: "blogpage"
 ---
-
-{% extends "base.njk" %}
-
 {% block content %}
-  {% for post in collections.posts_en %}
+  {% for post in collections.posts_ru %}
     {% if loop.first %}<ul class="post-list">{% endif %}
       <li>
         <article class="post u-flex u-justify-between">

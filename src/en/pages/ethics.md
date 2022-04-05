@@ -1,8 +1,6 @@
 ---
+layout: dropdowns.njk
 pageTitle: Ethics
 permalink: "/{{ locale }}/ethics/index.html"
 translationKey: "ethicsPage"
 ---
-
-{% extends "base.njk" %}
-{% block content %} {% endblock %}

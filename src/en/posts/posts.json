@@ -1,4 +1,5 @@
 {
     "layout": "blogpost.njk",
+    "pageTitle": "Articles",
     "permalink": "/{{ locale }}/articles/{{ page.fileSlug }}/index.html"
 }
