@@ -1,5 +1,5 @@
 ---
-layout: dropdowns.njk
+layout: base.njk
 pageTitle: Work
 permalink: "/{{ locale }}/work/index.html"
 translationKey: "workPage"
@@ -7,21 +7,15 @@ translationKey: "workPage"
 
 ## Proficiencies
 
-### Python
+### Python <span>**5 years**</span>
 
-Experience: **5 years**
+### SQL <span>**5 years**</span>
 
-### SQL
-Experience: **5 years**
+### Bash <span>**3 years**</span>
 
-### Bash
-Experience: **3 years**
+### Javascript <span>**1 year**</span>
 
-### Javascript
-Experience: **1 year**
-
-### C#
-Experience: **1 year**
+### C# <span>**1 year**</span>
 
 ## Projects
 
