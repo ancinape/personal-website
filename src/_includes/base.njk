@@ -14,16 +14,14 @@ title: pageTitle
         <meta name="description" content="{{ site[locale].metaDescription }}"/>
         <script>document.documentElement.classList.remove('no-js');</script>
         <link rel ="icon" href="/assets/favicon.ico" sizes="any">
-        <link rel="stylesheet" href="{{ '/assets/css/cssclear.css' | url }}">
         <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
-        <link rel="stylesheet" href="{{ '/assets/css/langswitcher.css' | url }}">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/eiisabethische" type="text/css"/>
     </head>
     
     <body>
         
         <div id="view">
-            <nav>
+            <nav aria-labelledby="primary-navigation" class="nav" role="menubar">
                 {% include "partials/nav.njk" %}
             </nav>
             <main>

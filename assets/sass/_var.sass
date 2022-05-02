@@ -18,5 +18,51 @@ $colorTextActive: lighten($colorTextUnvisited, 20%)
 // Font details
 $fontHeader: 'EIisabethischeBook'
 $fontBody: 'Liberation Serif'
-$fontSize: 12px
-$fontHeadingScale: 8 // amount of px to grow from h6 to h1
+$fontSize: 16pt
+$fontHeadingScale: 4 // amount of pts to grow from h6 to h1
+
+// Responsive Design
+$small-width: 480px
+$medium-width: 768px
+$large-width: 1024px
+
+
+@mixin extra-small 
+  @media (max-width: $small-width - 1px) 
+    @content
+  
+
+
+@mixin small-down 
+  @media (max-width: $medium-width - 1px) 
+    @content
+  
+
+
+@mixin small-only 
+  @media (min-width: $small-width) and (max-width: $medium-width - 1px) 
+    @content
+  
+
+
+@mixin small-up 
+  @media (min-width: $small-width) 
+    @content
+  
+
+
+@mixin medium-only 
+  @media (min-width: $medium-width) and (max-width: $large-width - 1px) 
+    @content
+  
+
+
+@mixin medium-up 
+  @media (min-width: $medium-width) 
+    @content
+  
+
+
+@mixin large 
+  @media (min-width: $large-width)
+    @content

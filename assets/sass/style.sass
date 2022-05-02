@@ -1,16 +1,18 @@
 @use 'sass:color'
-@use 'var'
+@import 'var'
+@import 'cssclear'
+@import 'langswitcher'
 
 
 :root
     background-image: url(../img/noise.jpg)
-    background-color: var.$colorBackground
+    background-color: $colorBackground
     background-blend-mode: multiply
-    color: var.$colorText
-    font-family: var.$fontBody
+    color: $colorText
+    font-family: $fontBody
     font-weight: normal
     font-style: normal
-    font-size: 16pt
+    font-size: $fontSize
     color-scheme: day
 
     strong, b
@@ -22,79 +24,116 @@
     p
         line-height: 1.4rem
 
+
     #view
         display: grid
-        grid-template-columns: 1fr 4fr 1fr
-        gap: 20px
-    
+        @include small-down
+            //grid-template-rows: 1fr 4fr 1fr
+            grid-template: "c" 0px "a b" 40px
+        @include medium-up
+            grid-template-columns: 1fr 4fr 1fr
+            gap: 20px
+        
     nav
-        margin-top: 5rem
         display: flex
-        flex-direction: rows
-        justify-content: space-around
+        justify-content: space-evenly
+        @include small-down
+            flex-direction: row
+        @include medium-up
+            height: 800px
+            flex-direction: column
 
-        ul
-            position: fixed
-
-        li
-            width: 80%
+        a
+            @include small-down
+                //width: 80px
+                flex-grow: 1
+                font-size: 14pt
+                margin: 5px
+                padding: 14px
+            @include medium-up
+                width: 150px
+                font-size: 20pt
+                margin: 20px
+                padding: 30px
+            text-decoration: inherit
+            color: $colorTextUnvisited
+            box-shadow: 10px 8px $color5
             text-align: center
-            background-color: var.$colorBackground
-            border: 2px solid var.$colorForeground
-            font-size: 20pt
-            margin: 20px
-            padding: 30px
+            border: 2px solid $colorForeground
+
+        [aria-current]
+            background-color: $color0
+            color: $colorTextActive
+            font-weight: bold
 
     main
-        padding-top: 6rem
+        @include small-down
+            padding-top: 1.25rem
+        @include medium-up
+            padding-top: 6rem
         padding-left: 1.25rem
         padding-right: 1.25rem
 
-    a
-        &:link
-            color: var.$colorTextUnvisited
-        
-        &:visited
-            color: var.$colorTextVisited
+        a
+            &:link
+                color: $colorTextUnvisited
+            
+            &:visited
+                color: $colorTextVisited
 
-        &:focus
-            color: var.$colorTextHover
-        
-        &:hover
-            color: var.$colorTextHover
+            &:focus
+                color: $colorTextHover
+            
+            &:hover
+                color: $colorTextHover
 
-        &:active
-            color: var.$colorTextActive
+            &:active
+                color: $colorTextActive
     
     canvas
         display: block
         margin-left: auto
         margin-right: auto
-        background-color: var.$colorForeground
+        background-color: $colorForeground
         max-height: 400px
     
     main ul
-        list-style: disc
+        line-height: 1.4rem
+        padding-left: 0.5rem
+        list-style: disc inside
 
         li li
-            list-style: circle
+            padding-left: 1rem
+            list-style: circle inside
         
             li
-                list-style: square
+                padding-left: 1.5rem
+                list-style: square inside
+    
+    svg.default-svg
+        width: $fontSize + $fontHeadingScale * 4
+        height: $fontSize + $fontHeadingScale * 4
+        filter: sepia(0.3)
+    
+    img
+        filter: sepia(0.3)
 
 // https://stackoverflow.com/a/38467145 by Fabian Mebus 
 @for $i from 1 through 6
     h#{$i}
-        font-size: var.$fontSize + var.$fontHeadingScale * (6 - $i)
-        font-family: var.$fontHeader
-        line-height: 4rem
+        @include small-down
+            font-size: $fontSize + $fontHeadingScale * (4 - $i)
+        @include medium-up
+            font-size: $fontSize + $fontHeadingScale * (6 - $i)
+        font-family: $fontHeader
+        line-height: 2.4rem
     
     h1
-        color: var.$color1
+        color: $color1
     
     h3 span
         position: absolute
         right: 20%
+        font-size: $fontSize
         font-style: italic
-        font-size: var.$fontSize + var.$fontHeadingScale * 2
-        color: lighten(var.$colorForeground, 15%)
+        color: lighten($colorForeground, 15%)

@@ -7,8 +7,8 @@ translationKey: "homepage"
 ## Welcome to my website
 ### WIP
 
-**Hi.** I am Farid, a designer engrossed in DevOps, extended reality (XR), user experience (UX), and vexillology (study of flags). See [Work](/en/work/) for my previous work. If you wish to contact me, feel free to email or video call me using the information provided in [Contact](/en/contact/).
+**Hi.** I am Farid, a recent graduate with an interest in programming, XR, and vexillology (study of flags). See my [Work](/en/work/). If you wish to [Contact](/en/contact/) me, feel free to email or video call me.
 
-Sometimes, I write about my work in [Articles](/en/articles/).
+Sometimes, I write [Articles](/en/articles/).
 
-Any programmer follows their code of ethics. As such, you can see my code of [Ethics](/en/ethics/).
+Any programmer follows their code of ethics. You can see my code of [Ethics](/en/ethics/).

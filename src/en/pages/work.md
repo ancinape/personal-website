@@ -4,10 +4,16 @@ pageTitle: Work
 permalink: "/{{ locale }}/work/index.html"
 translationKey: "workPage"
 ---
+{% svgsprite %}
+
 
 ## Proficiencies
 
+
 ### Python <span>**5 years**</span>
+
+{% svg "file_type_python" %}
+
 
 ### SQL <span>**5 years**</span>
 
@@ -21,7 +27,6 @@ translationKey: "workPage"
 
 ### COVID-19 Vaccination Scheduling Form<span>2021-Present</span>
 *Yale University's primary system for scheduling COVID-19 vaccines*
-* Designed a Qualtrics survey for scheduling COVID-19 vaccines to 21,000+ students, staff, faculty, and their relatives
 * Built mission critical PowerBI reports for directors to advise on Yale's COVID-19 policies
 
 ### Fracture Care Education Tool<span>2021-Present</span>

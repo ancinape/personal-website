@@ -1,19 +1,18 @@
-@use 'var'
+@import 'var'
 
-.header 
-    position: sticky
-    top: 0px
+.header
+    box-shadow: -10px 8px $color5
 
 
 .back 
     margin-bottom: 2em
     display: block
-    font-size: 14px
+    font-size: 14px1
 
 
 .c-lggnav 
-    border: 2px solid var.$colorForeground
-    background-color: var.$colorBackground
+    border: 2px solid $colorForeground
+    background-color: $colorBackground
     display: flex
     justify-content: space-evenly
 
@@ -25,33 +24,33 @@
 
 
 .index .c-lggnav .c-lggnav__item .c-lggnav__link 
-    color: var.$colorText
+    color: $colorText
 
 
 .index .c-lggnav .c-lggnav__item:first-child 
-    border-right: 2px solid var.$colorForeground
+    border-right: 2px solid $colorForeground
 
 
 .c-lggnav .c-lggnav__item .c-lggnav__link 
     padding: 1em 0
     display: block
-    color: var.$colorText
+    color: $colorText
     margin: 5px
     padding: 10px
 
 
 .c-lggnav .c-lggnav__item.is-active 
-    background-color: var.$colorForeground
+    background-color: $color0
 
 .c-lggnav .c-lggnav__item.is-active .c-lggnav__link 
-    color: var.$colorTextActive
+    color: $colorTextActive
 
 
 .c-lggnav .c-lggnav__link 
-    font-family: var.$fontHeader
+    font-family: $fontHeader
     font-size: 20px
     font-weight: 800
-    color: var.$colorText
+    color: $colorText
 
 .post 
     width: 100%
@@ -63,12 +62,12 @@
 
 .post-list li 
     padding: 0.5em 0
-    border: 2px solid var.$color1
+    border: 2px solid $color1
     transition: 0.4s
 
 
 .post-list li:hover 
-    background: var.$colorTextHover
+    background: $colorTextHover
 
 
 .u-flex 

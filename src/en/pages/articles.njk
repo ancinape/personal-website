@@ -8,15 +8,14 @@ translationKey: "blogpage"
 {% block content %}
 
   {% for post in collections.posts_en %}
-    {% if loop.first %}<ul class="post-list">{% endif %}
-      <li>
+    {% if loop.first %}<div class="post-list">{% endif %}
+
         <article class="post u-flex u-justify-between">
           <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
           <time datetime="{{ post.date | date('Y-MM-DD') }}">{{ post.date | date("DD MMMM[,] Y", locale) }}</time>
         </article>
-      </li>
 
-    {% if loop.last %}</ul>{% endif %}
+    {% if loop.last %}</div>{% endif %}
   {% endfor %}
 
 {% endblock %}

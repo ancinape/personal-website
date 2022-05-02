@@ -5,7 +5,7 @@ permalink: "/{{ locale }}/contact/index.html"
 translationKey: "contactPage"
 ---
 
-Email ancinape (at) tutanota.com
+ancinape (at) tutanota.com
 
 https://meet.jit.si/MeetMeInterview
 
