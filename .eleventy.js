@@ -1,4 +1,6 @@
 const moment = require("moment");
+const svgSprite = require("eleventy-plugin-svg-sprite");
+
 module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget("assets/sass");
     eleventyConfig.addPassthroughCopy('assets/img');
@@ -8,6 +10,12 @@ module.exports = function (eleventyConfig) {
         moment.locale(locale);
         return moment(date).format(format);
     });
+
+    eleventyConfig.addPlugin(svgSprite, {
+        path: "assets/vscode-icons",
+        defaultClasses: "default-svg"
+    });
+
                        
     // Locale collections
     eleventyConfig.addCollection("posts_en", function (collection) {
