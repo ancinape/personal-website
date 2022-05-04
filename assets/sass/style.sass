@@ -12,7 +12,10 @@
     font-family: $fontBody
     font-weight: normal
     font-style: normal
-    font-size: $fontSize
+    @include medium-down
+        font-size: $fontSize - 2
+    @include large
+        font-size: $fontSize
     color-scheme: day
 
     strong, b
@@ -22,35 +25,38 @@
         font-style: italic
 
     p
-        line-height: 1.4rem
+        line-height: 1.5em
+        margin-block-end: 2em
 
 
-    #view
+    div#view
         display: grid
-        @include small-down
-            //grid-template-rows: 1fr 4fr 1fr
-            grid-template: "c" 0px "a b" 40px
-        @include medium-up
+        //overflow: hidden
+        @include medium-down
+            grid-template-rows: auto
+        @include large
             grid-template-columns: 1fr 4fr 1fr
             gap: 20px
-        
+
     nav
         display: flex
         justify-content: space-evenly
-        @include small-down
+        @include medium-down
             flex-direction: row
-        @include medium-up
+        @include large
             height: 800px
+            margin-left: auto
+            margin-right: auto
             flex-direction: column
 
         a
-            @include small-down
+            @include medium-down
                 //width: 80px
                 flex-grow: 1
                 font-size: 14pt
                 margin: 5px
                 padding: 14px
-            @include medium-up
+            @include large
                 width: 150px
                 font-size: 20pt
                 margin: 20px
@@ -60,6 +66,7 @@
             box-shadow: 10px 8px $color5
             text-align: center
             border: 2px solid $colorForeground
+            background-color: $colorBackground
 
         [aria-current]
             background-color: $color0
@@ -67,70 +74,83 @@
             font-weight: bold
 
     main
-        @include small-down
-            padding-top: 1.25rem
-        @include medium-up
-            padding-top: 6rem
-        padding-left: 1.25rem
-        padding-right: 1.25rem
+        @include medium-down
+            padding-top: 1em
+        @include large
+            padding-top: 6em
+        // https://maxdesign.com.au/articles/em/ by Max Design
+        min-width: $minimumSize
+        max-width: $maximumSize
+        margin-left: auto
+        margin-right: auto
 
         a
             &:link
                 color: $colorTextUnvisited
-            
+
             &:visited
                 color: $colorTextVisited
 
             &:focus
                 color: $colorTextHover
-            
+
             &:hover
                 color: $colorTextHover
 
             &:active
                 color: $colorTextActive
-    
+        ul
+            line-height: 1.4em
+            padding-left: 0.5em
+            list-style: disc inside
+
+            li li
+                padding-left: 1em
+                list-style: circle inside
+
+                li
+                    padding-left: 1.5em
+                    list-style: square inside
+
+        img
+            margin-left: auto
+            margin-right: auto
+            width: 100%
+            height: auto
+            border: 2px solid $colorForeground
+            box-shadow: 10px 8px $color5
+
     canvas
         display: block
+        background-color: $colorForeground
         margin-left: auto
         margin-right: auto
-        background-color: $colorForeground
+        max-width: $maximumSize
         max-height: 400px
-    
-    main ul
-        line-height: 1.4rem
-        padding-left: 0.5rem
-        list-style: disc inside
 
-        li li
-            padding-left: 1rem
-            list-style: circle inside
-        
-            li
-                padding-left: 1.5rem
-                list-style: square inside
-    
     svg.default-svg
         width: $fontSize + $fontHeadingScale * 4
         height: $fontSize + $fontHeadingScale * 4
         filter: sepia(0.3)
-    
-    img
-        filter: sepia(0.3)
+
+    //img
+       //filter: sepia(0.3)
 
 // https://stackoverflow.com/a/38467145 by Fabian Mebus 
 @for $i from 1 through 6
     h#{$i}
-        @include small-down
+        @include medium-down
             font-size: $fontSize + $fontHeadingScale * (4 - $i)
-        @include medium-up
+        @include large
             font-size: $fontSize + $fontHeadingScale * (6 - $i)
         font-family: $fontHeader
         line-height: 2.4rem
-    
+        margin-block-start: 1em
+        margin-block-end: 1em
+
     h1
         color: $color1
-    
+
     h3 span
         position: absolute
         right: 20%

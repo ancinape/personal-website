@@ -3,7 +3,7 @@ layout: base.njk
 ---
 
 {% block content %}
-    <a href="/{{ locale }}" class="back">← {{ site[locale].back }}</a>
+    <a href="{{ nav[locale][3].url }}" class="back">← {{ site[locale].back }}</a>
     <h1>{{ title }}</h1>
     {{ content | safe }}
 {% endblock %}

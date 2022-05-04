@@ -18,13 +18,17 @@ $colorTextActive: lighten($colorTextUnvisited, 20%)
 // Font details
 $fontHeader: 'EIisabethischeBook'
 $fontBody: 'Liberation Serif'
-$fontSize: 16pt
+$fontSize: 14pt
 $fontHeadingScale: 4 // amount of pts to grow from h6 to h1
 
 // Responsive Design
 $small-width: 480px
 $medium-width: 768px
 $large-width: 1024px
+
+// Main Panel Design
+$minimumSize: 25em
+$maximumSize: 33em
 
 
 @mixin extra-small 
@@ -50,6 +54,9 @@ $large-width: 1024px
     @content
   
 
+@mixin medium-down
+  @media (max-width: $large-width - 1px) 
+    @content
 
 @mixin medium-only 
   @media (min-width: $medium-width) and (max-width: $large-width - 1px) 

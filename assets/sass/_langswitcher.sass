@@ -1,13 +1,8 @@
 @import 'var'
 
 .header
-    box-shadow: -10px 8px $color5
-
-
-.back 
-    margin-bottom: 2em
-    display: block
-    font-size: 14px1
+    @include large
+        box-shadow: -10px 8px $color5
 
 
 .c-lggnav 
@@ -76,16 +71,3 @@
 
 .u-justify-between 
     justify-content: space-between
-
-
-/*A11TY*/
-.u-visually-hidden 
-    display: block
-    height: 1px
-    width: 1px
-    overflow: hidden
-    clip: rect(1px 1px 1px 1px)
-    clip: rect(1px, 1px, 1px, 1px)
-    clip-path: inset(1px)
-    white-space: nowrap
-    position: absolute

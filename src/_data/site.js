@@ -1,6 +1,6 @@
 module.exports = {
     buildTime: new Date(),
-    baseUrl: "https://www.mysite.com",
+    baseUrl: "https://www.letsgettoknow.me",
     name: "mySite",
     languages: [
       {
