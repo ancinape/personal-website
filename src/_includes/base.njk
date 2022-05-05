@@ -25,11 +25,15 @@ title: pageTitle
                 {% include "partials/nav.njk" %}
             </nav>
             <main>
-                <h1>{{ pageTitle }}</h1>
+                <h1>{{ pageTitle }}</h1><hr>
                 {{ content | safe }}
             </main>
             <aside>
                 {% include "partials/header.njk" %}
+                {# Check if current page is an article then place table of contents #}
+                {% if nav[locale][3].url in page.url %}
+                    {% include "partials/toc.njk" %}
+                {% endif %}
             </aside>
         </div>
         

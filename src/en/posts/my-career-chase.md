@@ -5,6 +5,8 @@ translationKey: "my-career-chase"
 
 My plan since high school has been to apply myself to enough openings to be hired in the technology sector. This may be anywhere in private or public, local or international, profit or non-profit, as long as I got to do what I love. That plan never survived first contact. Since then, I have made many changes to how I apply myself, such as this blog.
 
+## Resume 
+
 My first resume was conventional. It was designed during a career fair at Yale University with advice from recruiters. The design was pragmatic and efficient, black text on white paper with my name emboldened at the top. My contact information and skills followed suit, with my work history covering the rest of my resume.
 
 ![First Resume](/assets/img/posts/resume1.jpg "First Resume")
@@ -32,3 +34,7 @@ Technically, this is a wireframe, as I included a placeholder for the headshot. 
 ![alt text](/assets/img/posts/resume5.jpg "tooltip text")
 
 This is the final iteration of my resume. The color scheme is made up of primary colors, coincidently making up the [Pansexual flag’s colors](https://en.wikipedia.org/wiki/Pansexual_flag). The scheme was kept pastel for easier viewing on the screen and on greyscale paper. The term “frameworks” was changed to “used in” as to include tools like Unity. I removed my hobby of vexillology, as it was not that important, and upgraded my server administration as an on-going project. By keeping the resume project-focused, a recruiter would learn of my internships last, hopefully considering me for my skills first.
+
+## Cover Letter
+
+## Website

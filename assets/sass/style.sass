@@ -12,10 +12,12 @@
     font-family: $fontBody
     font-weight: normal
     font-style: normal
-    @include medium-down
+    @include small-down
+        font-size: $fontSize - 4
+    @include medium-only
         font-size: $fontSize - 2
     @include large
-        font-size: $fontSize
+        font-size: $fontSize + 2
     color-scheme: day
 
     strong, b
@@ -27,6 +29,12 @@
     p
         line-height: 1.5em
         margin-block-end: 2em
+    
+    .emoji
+        height: 1.2em
+
+    hr
+        border-top-color: $colorText
 
 
     div#view
@@ -50,8 +58,7 @@
             flex-direction: column
 
         a
-            @include medium-down
-                //width: 80px
+            @include medium-down 
                 flex-grow: 1
                 font-size: 14pt
                 margin: 5px
@@ -63,7 +70,7 @@
                 padding: 30px
             text-decoration: inherit
             color: $colorTextUnvisited
-            box-shadow: 10px 8px $color5
+            box-shadow: -10px 8px $color5
             text-align: center
             border: 2px solid $colorForeground
             background-color: $colorBackground
@@ -72,6 +79,51 @@
             background-color: $color0
             color: $colorTextActive
             font-weight: bold
+        
+    div .toc
+        @include medium-down
+            padding-top: 1em
+        @include large
+            padding-top: 6em
+        ol
+            right: 0px
+            display: flex
+            justify-content: space-evenly
+            position: fixed
+            @include medium-down
+                flex-direction: row
+            @include large
+                margin-left: auto
+                margin-right: auto
+                flex-direction: column
+            box-shadow: 10px 8px $color5
+            border: 2px solid $colorForeground
+            background-color: $colorBackground
+
+            li
+                display: block
+                box-sizing: content-box
+                @include medium-down 
+                    flex-grow: 1
+                    font-size: 14pt
+                    margin: 5px
+                    padding: 14px
+                @include large
+                    flex-grow: 1
+                    width: 150px
+                    font-size: 20pt
+                    padding: 30px
+
+                a
+                    color: $color1
+                    text-decoration: inherit
+                    font-family: $fontHeader
+                
+                li
+                    padding-left: 1em
+
+                    li
+                        padding-left: 1.5em
 
     main
         @include medium-down
@@ -83,6 +135,7 @@
         max-width: $maximumSize
         margin-left: auto
         margin-right: auto
+        text-align: justify
 
         a
             &:link
@@ -152,8 +205,7 @@
         color: $color1
 
     h3 span
-        position: absolute
-        right: 20%
+        float: right
         font-size: $fontSize
         font-style: italic
         color: lighten($colorForeground, 15%)
