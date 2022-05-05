@@ -32,7 +32,7 @@ translationKey: "workPage"
 ### Fracture Care Education Tool<span>2021-Present</span>
 *Yale Department of Orthopaedics' training tool for fixture of femoral neck*
 * Built on Unity with medical professionals in Yale's Department of Orthopaedics
-* Traings and tests trauma care students on the proper method of fracture surgery on a femur
+* Trains and tests trauma care students on the proper method of fracture surgery on a femur
 * Awaiting grant IRB approval to test on trauma care students at Yale
 
 ### Linux Server Management<span>2019-Present</span>
