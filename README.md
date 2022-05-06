@@ -13,13 +13,13 @@ The design of the website is minimal and retro. Retro in both sense of the word.
 I want my website to be accessible to as many people as possible. It is the reason there are two languages available. However, I have yet to explicitly follow any web accessibility guidelines. Something to work on in the future. 😄
 
 ## Features
-### Bilingual
+### 🗣 Bilingual
 Inspired by [Multilingual sites with Eleventy](https://www.webstoemp.com/blog/multilingual-sites-eleventy/) and [Eleventy-multilingual starter](https://github.com/lea37/eleventy-multilingual), the website is available in two languages: English and Russian. This includes automatic quotes translation by markdown-it and appropriate date formatting by moment. Any page can switch between English and Russian by selecting the appropriate language on the top right.
 
-### Static Site
+### 🪨 Static Site
 Generated with Eleventy (11ty), the website is a simple, static site with few clientside processes (exceptions being the JavaScript toy on the home page, and the language switcher on the landing page). The source utilizes between multiple languages, namely HTML, Nunjucks, Liquid, Markdown, and JavaScript with styling by Sass.
 
-### Responsive Design
+### 📱 Responsive Design
 Inspired by [Using SASS Mixins for Responsive Web Design](https://www.ching-wang.io/posts/Using-sass-mixins-for-responsive-web-design/), Sass enables the site to be responsive between mobile and desktop interfaces. The navigation panel and language switcher remains on the sides unless viewed through a mobile device, in which they take the top and bottom of the page respectively.
 
 ## Dependencies
@@ -34,6 +34,21 @@ Inspired by [Using SASS Mixins for Responsive Web Design](https://www.ching-wang
 * markdown-it-emoji
 * eleventy-plugin-toc
 * eleventy-plugin-svg-sprite
+
+## Installation
+To run your own instance of the website, follow these steps on your commandline.
+
+```sh
+> git clone https://github.com/ancinape/personal-website.git
+> cd personal-website
+> npm install
+> npm start
+```
+
+## Bugs
+* Text overflows in mobile view
+* Missing aria-labels
+* Markdown not fully tested with my style
 
 ## Structure
 The project's structure is explained in [STRUCTURE](/STRUCTURE.md) with notes for each directory. Useful if you want to learn what each part of the project does.

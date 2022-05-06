@@ -2,7 +2,7 @@
 	"name": "personal-website",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.md",
+	"main": "index.njk",
 	"scripts": {
 		"watch:sass": "sass --watch assets/sass:public/assets/css",
 		"build:sass": "sass assets/sass:public/assets/css",
