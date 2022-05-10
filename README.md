@@ -54,7 +54,7 @@ To run your own instance of the website, follow these steps on your commandline.
 The project's structure is explained in [STRUCTURE](/STRUCTURE.md) with notes for each directory. Useful if you want to learn what each part of the project does.
 
 ## License
-All personal work released into the public domain. See [LICENSE](/LICENSE.md) for details.
+All personal work released into the public domain. See [LICENSE](/LICENSE) for details.
 
 ## Inspirations
 ### Bilingual Setup
