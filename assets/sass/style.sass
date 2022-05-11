@@ -79,7 +79,7 @@
             background-color: $color0
             color: $colorTextActive
             font-weight: bold
-        
+
     div .toc
         @include medium-down
             padding-top: 1em
@@ -173,6 +173,33 @@
             border: 2px solid $colorForeground
             box-shadow: 10px 8px $color5
 
+        table
+            width: 100%
+
+            caption, thead
+                color: $color1
+                font-weight: bold
+                text-transform: uppercase
+                text-align: center
+
+            thead
+                border-bottom: 2px solid $colorText
+
+                th
+                    border: 1px solid color.adjust($color6, $alpha: -0.5)
+                    padding: 10px
+
+            tbody
+                tr
+                    border-bottom: 1px solid color.adjust($color6, $alpha: -0.5)
+                    td
+                        padding: 10px
+                        border: 1px solid color.adjust($color6, $alpha: -0.5)
+            tfoot
+                color: $color6
+                font-style: italic
+                border-bottom: 2px solid $colorText
+
     canvas
         display: block
         background-color: $colorForeground
@@ -201,6 +228,7 @@
 
     h1
         color: $color1
+        margin-block: 1em
 
     h3 span
         float: right
