@@ -1,5 +1,5 @@
 # Personal Website Source Code
-## [letsgettoknow.me](letsgettoknow.me)
+## [letsgettoknow.me](https://letsgettoknow.me)
 
 ![website screenshot](/github/personalwebsite.jpg)
 
