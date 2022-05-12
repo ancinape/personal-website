@@ -40,7 +40,7 @@ module.exports = {
       },
       {
         label: "Contact",
-        url: "/en/contact"
+        url: "/en/contact/"
       },
     ]
   };
