@@ -6,6 +6,7 @@ translationKey: "workPage"
 ---
 {% svgsprite %}
 
+[Resume](/assets/files/resume.pdf) | [Resume without portrait](/assets/files/resume_without_portrait.pdf)
 *In chronological order, from most recent date of creation to oldest date of creation*
 
 ## 2022
