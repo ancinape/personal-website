@@ -75,3 +75,8 @@ All personal work released into the public domain. See [LICENSE](/LICENSE) for d
 ["Using SASS Mixins for Responsive Web Design"](https://www.ching-wang.io/posts/Using-sass-mixins-for-responsive-web-design/) by [Ching Wang](https://www.ching-wang.io/)
 
 [Sass Reset](https://www.boag.online/blog/css-reset) by [Fraser Boag](https://www.boag.online/)
+
+[Image caption with Jekyll markdown](https://stackoverflow.com/a/30366422) by [Andrew Wei](https://stackoverflow.com/users/851742/andrew-wei)
+
+### JavaScript
+[Dollar](https://github.com/EmDev21/Dollar) by [EmDev21](https://github.com/EmDev21)
