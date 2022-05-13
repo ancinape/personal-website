@@ -2,6 +2,7 @@
 @import 'var'
 @import 'cssclear'
 @import 'langswitcher'
+@import 'terminal'
 
 
 :root
@@ -29,6 +30,9 @@
     p
         line-height: 1.5em
         margin-block-end: 1em
+
+    code
+        font-family: $fontMono
 
     .emoji
         height: 1.2em
@@ -133,6 +137,8 @@
         // https://maxdesign.com.au/articles/em/ by Max Design
         min-width: $minimumSize
         max-width: $maximumSize
+        ///
+        overflow-wrap: break-word
         margin-left: auto
         margin-right: auto
         text-align: justify
@@ -200,12 +206,28 @@
                 font-style: italic
                 border-bottom: 2px solid $colorText
 
+        .first-letter
+            font-family: $fontHeader
+            font-size: $fontSize + $fontHeadingScale * 6
+            color: $color1
+            font-weight: bold
+            margin-right: 2pt
+
+        .screen-reader-only
+            clip: rect(0 0 0 0)
+            clip-path: inset(50%)
+            height: 1px
+            overflow: hidden
+            position: absolute
+            white-space: nowrap
+            width: 1px
+
     canvas
         display: block
         background-color: $colorForeground
         margin-left: auto
         margin-right: auto
-        max-width: $maximumSize
+        max-width: 100%
         max-height: 400px
 
     svg.default-svg

@@ -1,0 +1,53 @@
+@import 'var'
+
+#screen
+    font-family: $fontMono
+    font-size: $fontSize
+    font-weight: 700
+    max-width: 100%
+    max-height: 400px
+    box-shadow: 10px 8px $color5
+    padding: 40px
+    margin-bottom: 1em
+    background-color: $colorForeground
+
+    #Container, #Container>div 
+        transform: rotateX(180deg)
+
+
+    .log 
+        padding-left: 10px
+        padding-right: 10px
+        color: $colorBackground
+
+
+    input
+        padding-left: 10px
+        padding-right: 10px
+        font-family: inherit
+        background-color: $colorForeground
+        color: $colorBackground
+        caret-color: transparent
+        width: 90%
+
+        border: none
+        border-color: transparent
+        appearance: none
+
+        &:focus
+            font-family: inherit
+            font-size: inherit
+            color: inherit
+            font-weight: inherit
+            outline: none !important
+            caret-color: $color1
+
+
+    #input 
+        padding-left: 10px
+        padding-right: 10px
+        color: $colorBackground
+
+
+    #input p
+        display: inline-block

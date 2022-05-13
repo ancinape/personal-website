@@ -1,4 +1,22 @@
+{% if toyPath.toyPath == "js/ball.js" %}
 <canvas id="myCanvas">
     <p> Damn, no js?</p>
 </canvas>
-<script> {% include "js/ball.js" %} </script>
+<script> {% include toyPath.toyPath %} </script>
+
+{% elif toyPath.toyPath == "js/term.js" %}
+<div id="screen">
+    <div id="Container">
+        <div id="input">
+            <p id="input_title"></p><input id="input_source" type="command" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofocus>
+        </div>
+        <div id="logger">
+            <div id="wrapper">
+            
+            </div>
+        </div>
+    </div>
+</div>
+<script> {% include toyPath.toyPath %} </script>
+<script> {% include "js/commands.js" %} </script>
+{% endif %}
