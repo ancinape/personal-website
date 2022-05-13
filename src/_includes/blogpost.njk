@@ -4,6 +4,7 @@ layout: base.njk
 
 {% block content %}
     <a href="{{ nav[locale][3].url }}" class="back">← {{ site[locale].back }}</a>
-    <h1 style="text-align: center;">{{ title }}</h1>
+    <h1 style="text-align: center;">{{ title }}<br />* * *</h1>
+    {# <h1 style="text-align: center;">* * *</h1> #}
     {{ content | dropcap | safe }}
 {% endblock %}
