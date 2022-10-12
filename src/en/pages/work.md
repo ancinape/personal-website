@@ -6,8 +6,7 @@ translationKey: "workPage"
 ---
 {% svgsprite %}
 
-[Resume](/assets/files/resume.pdf) | [Resume without portrait](/assets/files/resume_without_portrait.pdf)
-*In chronological order, from most recent date of creation to oldest date of creation*
+*In order of most recent date of creation to oldest date of creation*
 
 ## 2022
 ---
@@ -67,3 +66,13 @@ translationKey: "workPage"
 
 [Link](https://assetstore.unity.com/publishers/44888)
 [Source Code](https://github.com/yale-ccam/verb-collective)
+
+## 2018
+---
+
+### New Haven Flag Proposal
+*Grassroots activism to change my hometown's flag*
+* `Created as part of my high school's graduation project`
+* `Testified in city hall in defense of the flag change, providing possible examples`
+
+[Article](https://www.nhregister.com/news/article/Resident-suggests-new-flag-for-New-Haven-12618094.php)
